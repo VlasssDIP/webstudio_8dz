@@ -139,10 +139,10 @@ body {
 .about-container {
   padding-top: 95px;
   display: flex;
+  gap: 30px;
 }
 .about-info {
   width: 25%;
-  padding-right: 30px;
 }
 .about-title {
   text-transform: uppercase;
@@ -204,12 +204,14 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
+  gap: 30px;
 }
 
 .team-card {
   border: 1px solid #c7c7c7;
   box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.5);
   background-color: white;
+  flex:25%;
 }
 
 .team img {
@@ -219,7 +221,7 @@ body {
 
 .about-teamate{
   text-align: center;
-  padding: 30px 60px;
+  padding: 30px;
 }
 
 
@@ -275,6 +277,7 @@ color: #757575;
 .port-list {
   display: flex;
   justify-content: center;
+  gap: 8px;
 }
 
 .port-list a{
@@ -282,7 +285,7 @@ padding: 6px 25px;
 background-color: #F5F4FA;
 border-radius: 4px;
 text-decoration: none;
-margin-right: 8px;
+display: block;
 }
 
 .port-list a:hover{
@@ -291,16 +294,18 @@ margin-right: 8px;
 }
 
 .port-item {
+  
 }
 .our_job_cards {
-  margin-top: 34px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  margin: 0 -15px;
 }
 .our_job_card {
-margin-top: 30px;
-border: 1px solid #f1f1f1;
+/*border: 1px solid #f1f1f1;*/
+flex: 0 0 33.3%;
+padding: 0 15px;
+margin-top: 34px;
 }
 
 .text-disc{
@@ -308,7 +313,9 @@ border: 1px solid #f1f1f1;
 }
 
 .port_img{
-
+  width: 100%;
+  height: 292px;
+  object-fit: cover;
 }
 
 .port_card_title {
@@ -326,3 +333,38 @@ border: 1px solid #f1f1f1;
   line-height: 30px;
   letter-spacing: 3%;
 }
+
+
+.our_job_card .border_card{
+  border: 1px solid #f1f1f1;
+}
+
+.border_card{
+ position: relative;
+}
+
+
+.card_hover{
+  display: flex;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 292px;
+  background-color: #2196F3E5;
+  color: #FFFFFF;
+  padding: 24px;
+  opacity: 0;
+  align-items: center;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 3%;
+  font-weight: 400;
+ 
+}
+
+.our_job_card:hover .card_hover{
+  opacity: 0.8;
+}
+
+

@@ -98,10 +98,12 @@ body {
 /*HERO STYLES*/
 
 .hero {
-  background-color: #2f303a;
+  background: linear-gradient(to left top, transparent, black),
+    url("../images/creatively.jpg");
   min-height: 600px;
   display: flex;
   align-items: center;
+  background-size: cover;
 }
 
 .hero-container {
@@ -132,24 +134,37 @@ body {
 
 /*ABOUT STYLES*/
 
-.about {
-}
-.container {
-}
+
 .about-container {
-  padding-top: 95px;
+  margin-top: 95px;
   display: flex;
   gap: 30px;
 }
 .about-info {
   width: 25%;
 }
+
+.about-info svg{
+  width: 70px;
+  height: 70px;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-info .svg-about{
+  padding: 25px 100px;
+  background-color: #F5F4FA;
+}
+
+
+
 .about-title {
   text-transform: uppercase;
   font-weight: 700;
   line-height: 16px;
   font-size: 14px;
   letter-spacing: 3%;
+  margin-top: 30px;
 }
 .about-text {
   color: #757575;
@@ -158,6 +173,7 @@ body {
   font-size: 14px;
   padding-top: 10px;
 }
+
 
 /*DOING STYLES*/
 
@@ -179,6 +195,7 @@ body {
   width: 33.333%;
   height: 294px;
   padding: 0 15px;
+  position: relative;
 }
 
 .doing-card img {
@@ -186,6 +203,32 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+.doing-card .name_img{
+  position: absolute;
+  top: 100%;
+  left: 15px;
+  width: 370px;
+  height: 70px;
+  padding: 27px 100px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0;
+  transition: all 2s ease;
+  color: white
+}
+
+.doing-card:hover .name_img{
+  background-color: #2F303ACC;
+  opacity: 0.8;
+  transition: all 1s ease;
+  transform: translate(0px,-70px);
+  color: white
+}
+
+
+
 
 /*TEAM STYLES*/
 
@@ -234,11 +277,91 @@ margin-bottom: 10px;
 color: #757575;
 }
 
+.social-links-list{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 16px;
+
+}
+
+.social-item a{
+display: flex;
+justify-content: center;
+align-items: center;
+line-height: 10px;
+width: 44px;
+height: 44px;
+border-radius: 50%;
+transition: all .3s linear;
+}
+
+.social-links-list .social-item svg{
+  width: 20px;
+  height: 20px;
+  fill: #AFB1B8;
+  transition: all .3s linear;
+}
+
+.social-item a:hover{
+
+  fill: white;
+  background-color: #2196f3;
+
+}
+
+.social-item a:hover svg{
+  fill: white;
+}
+
+/*REGULAR CUSTOMERS*/
+
+.customs {
+}
+
+.customs-container {
+  padding: 95px 0;
+  text-align: center;
+}
+.customs-title {
+}
+.title {
+}
+.customs-companies {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+}
+.customs-company svg{
+  width: 106px;
+  height: 60px;
+  fill: #AFB1B8;
+  transition: all .3s linear;
+}
+
+.customs-companies .customs-company a{
+  display: flex;
+  padding: 16px 32px;
+  border: 1px solid #AFB1B8;  
+  border-radius: 4px;
+  transition: all .3s linear;
+}
+
+.customs-company a:hover{
+  border: 1px solid #2196F3;
+}
+
+.customs-company a:hover svg{
+  fill: #2196F3;
+}
+
+
 /*FOOTER*/
 
 .footer {
   background-color: #2f303a;
   padding: 60px 0;
+  display: flex;
 }
 
 .footer-container {
@@ -259,13 +382,54 @@ color: #757575;
   font-size: 14px;
 }
 
+.footer-main{
+  display: flex;
+  gap: 140px;
+}
+
 .footer-logo {
   margin-bottom: 11px;
 }
 
 
+.join-item svg{
+width: 20px;
+height: 20px;
+fill: white;
+transition: all .3s linear;
+}
+
+.join-links-list{
+  display: flex;
+  gap: 10px;
+}
+
+.join_title{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.join-item a{
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: #757575;
+  transition: all .3s linear;
+}
+
+
+.join-item a:hover{
+  background-color: #2196F3;
+}
 
 /*PORTFOLIO STYLES*/
+
 
 
 .portfolio-container {

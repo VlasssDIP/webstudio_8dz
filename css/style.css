@@ -40,7 +40,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -95,6 +95,10 @@ body {
   color: #757575;
 }
 
+
+.header-burger{
+  display: none;
+}
 /*HERO STYLES*/
 
 .hero {
@@ -155,6 +159,7 @@ body {
   padding: 25px 100px;
   background-color: #F5F4FA;
 }
+
 
 
 
@@ -257,7 +262,7 @@ body {
   flex:25%;
 }
 
-.team img {
+.team-card img {
   width: 100%;
   object-fit: cover;
 }
